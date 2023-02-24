@@ -58,7 +58,6 @@ async function fetchJson(url, options, onCancel) {
  */
 
 export async function listReservations(date, signal) {
-   console.log(process.env)
    const url = new URL(`${API_BASE_URL}/reservations?date=${date}`)
    return await fetchJson(url, { headers, signal }, [])
       .then(formatReservationDate)
