@@ -13,7 +13,7 @@ export default function ListAllTables({ tables, clickHandler }) {
                </thead>
                <tbody>
                   {tables
-                     .sort((a, b) => b.table_id - a.table_id)
+                     .sort((a, b) => a.table_id - b.table_id)
                      .map((table) => (
                         <tr key={table.table_id}>
                            <td>{table.table_id}</td>
